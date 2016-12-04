@@ -7,12 +7,21 @@
  */
 
 namespace app\models;
+use yii\db\ActiveRecord;
 
 /**
  * Description of Category
  *
  * @author Sancho
  */
-class Category {
-    //put your code here
+class Category extends ActiveRecord {
+    
+    public static function tableName() {
+        return 'category';
+    }
+    
+    public function getProducts() {
+        $this->hasMany(Product::className(), ['category_id' => 'id']);
+    }
+    
 }
