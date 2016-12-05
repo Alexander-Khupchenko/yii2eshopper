@@ -2,11 +2,16 @@
 
 namespace app\components;
 use yii\base\Widget;
+use app\models\Category;
 
 class MenuWidget extends Widget {
     
     public $tpl;
-    
+    public $data;
+    public $tree;
+    public $menuHtml;
+
+
     public function init() {
         parent::init();
         if($this->tpl === null) {
@@ -16,6 +21,8 @@ class MenuWidget extends Widget {
     }
 
     public function run() {
+        $this->data = Category::find()->all();
+        debug($this->data);
         return $this->tpl;
     }
     
