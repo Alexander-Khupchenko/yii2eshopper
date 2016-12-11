@@ -9,11 +9,6 @@
 namespace app\models;
 use yii\db\ActiveRecord;
 
-/**
- * Description of Category
- *
- * @author Sancho
- */
 class Product extends ActiveRecord {
     
     public static function tableName() {
@@ -21,7 +16,7 @@ class Product extends ActiveRecord {
     }
     
     public function getCategory() {
-        $this->hasOne(Category::className(), ['id' => 'category_id']);
+        return $this->hasOne(Category::className(), ['id' => 'category_id']);
     }
     
 }

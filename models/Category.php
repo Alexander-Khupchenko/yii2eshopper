@@ -9,11 +9,6 @@
 namespace app\models;
 use yii\db\ActiveRecord;
 
-/**
- * Description of Category
- *
- * @author Sancho
- */
 class Category extends ActiveRecord {
     
     public static function tableName() {
