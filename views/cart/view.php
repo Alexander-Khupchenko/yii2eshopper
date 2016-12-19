@@ -10,8 +10,7 @@ use yii\widgets\ActiveForm;
                 <span aria-hidden="true">&times;</span>
             </button>
             <?php echo Yii::$app->session->getFlash('success');?>
-        </div>
-            
+        </div>         
     <?php endif;?>
     
     <?php if( Yii::$app->session->hasFlash('error') ): ?>
